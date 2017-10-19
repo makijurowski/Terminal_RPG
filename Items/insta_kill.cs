@@ -3,11 +3,11 @@ using System;
 namespace terminal_rpg
 {
     
-    public class Heal_Potion : Item
+    public class Insta_Kill : Item
     {
     
-        public Heal_Potion(){
-            ClassName = "Heal_Potions";
+        public Insta_Kill(){
+            ClassName = "Insta_Kill";
             
 
         }
@@ -18,8 +18,8 @@ namespace terminal_rpg
             {
             Count -= 1;
             Human target = obj as Human;
-            target.Health += 15;
-            System.Console.WriteLine("{0} received +15 hp", target.Name);
+            target.Health = 0;
+            System.Console.WriteLine("INSTA KILL!!!! {0} suddenly dropped dead.", target.Name);
             }
             else{
                     System.Console.WriteLine("You do not have any {0}", ClassName);

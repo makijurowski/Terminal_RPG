@@ -6,33 +6,24 @@ namespace terminal_rpg
     
     public class Item
     {
-        public int Item_Count = 0;
+        public string ClassName {get; set;}
+        public int Count {get; set;}
 
     
     public Item()
     {
-        Item_Count += 1;
+        ClassName = "Item";
+        
     }
-    public void Use() 
+    public int Add()
     {
-        Item_Count -= 1;
-
+       return Count += 1;
     }
-    public void Use(object obj) 
-    {
-        Item_Count -= 1;
-
-    }
-    public void Use(object obj1, object obj2) 
-    {
-        Item_Count -= 1;
-
-    }
-    public void Use(object obj1, object obj2, object obj3) 
-    {
-        Item_Count -= 1;
+    public void How_Many()
+        {
+            System.Console.WriteLine("Number of {0}: {1}", ClassName  ,Count);
+        }
 
     }
 
     }
-}
