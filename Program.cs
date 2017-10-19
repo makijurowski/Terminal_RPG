@@ -4,33 +4,16 @@ namespace terminal_rpg
 {
     class Program
     {
+
+        public void Start_Game()
+        {
+            System.Console.WriteLine("Welcome to Dojo Adventures!");
+            System.Console.WriteLine("Are you ready to play Dojo Adventures? Get hyped...");
+        }
+
         // Main method invoked upon running program
         static void Main(string[] args)
         {
-            Human me = new Human("Jeff");
-            Zombie zeek1 = new Zombie("zeek");
-            Zombie zeek2 = new Zombie("zeek");
-            Zombie zeek3 = new Zombie("zeek");
-            Grenade grenade = new Grenade();
-            Heal_Potion heal = new Heal_Potion();
-            Enrage enrage = new Enrage();
-            grenade.Add();
-            grenade.Add();
-            grenade.Add();
-            heal.Add();
-            grenade.How_Many();
-            heal.How_Many();
-            enrage.How_Many();
-            grenade.Use(zeek1);
-            System.Console.WriteLine(zeek1.Health);
-            grenade.How_Many();
-            enrage.Use(me);
-            
-            
-            
-            
-            
-
             // // Create new player of class Human
             // Human me = new Human("Maki");
             // me.Health = 200;
@@ -59,25 +42,25 @@ namespace terminal_rpg
             // System.Console.WriteLine("  Hero 3: {0}", Nick.ShowStatus());
             // System.Console.WriteLine("  Hero 4: {0}", Sam.ShowStatus());
 
-            // // Show stats of enemies at the beginning of the game
-            // System.Console.WriteLine("\n~ ALL ENEMIES ~\n");
-            // System.Console.WriteLine(" Enemy 1: {0}", Zeek.ShowStatus());
-            // System.Console.WriteLine(" Enemy 2: {0}", Timmy.ShowStatus());
-            // System.Console.WriteLine(" Enemy 3: {0}", Slink.ShowStatus());
-            // System.Console.WriteLine(" Enemy 4: {0}", Goblix.ShowStatus());
-            
-            // // Attack round
-            // System.Console.WriteLine("\n=============================== While Attacking ===============================\n");
-            // System.Console.WriteLine("1. Wanda fireballs me.");
-            // Wanda.Fireball(me);
-            // System.Console.WriteLine("2. I attack Steve.");
-            // me.Attack(Steve);
-            // System.Console.WriteLine("3. Steve stabs Wanda with his quill.");
-            // Steve.Quill_Stab(Wanda);
-            // System.Console.WriteLine("4. Sam death blows Wanda. (Suck it Wanda!)");
-            // Sam.Death_Blow(Wanda);
-            // System.Console.WriteLine("5. Nick steals from Sam.");
-            // Nick.Steal(Sam);
+            // Show stats of enemies at the beginning of the game
+            System.Console.WriteLine("\n~ ALL ENEMIES ~\n");
+            System.Console.WriteLine(" Enemy 1: {0}", Zeek.ShowStatus());
+            System.Console.WriteLine(" Enemy 2: {0}", Timmy.ShowStatus());
+            System.Console.WriteLine(" Enemy 3: {0}", Slink.ShowStatus());
+            System.Console.WriteLine(" Enemy 4: {0}", Goblix.ShowStatus());
+
+            // Attack round
+            System.Console.WriteLine("\n=============================== While Attacking ===============================\n");
+            System.Console.WriteLine("1. Wanda fireballs me.");
+            Wanda.Fireball(me);
+            System.Console.WriteLine("2. I attack Steve.");
+            me.Attack(Steve);
+            System.Console.WriteLine("3. Steve stabs Wanda with his quill.");
+            Steve.Quill_Stab(Wanda);
+            System.Console.WriteLine("4. Sam death blows Wanda. (Suck it Wanda!)");
+            Sam.Death_Blow(Wanda);
+            System.Console.WriteLine("5. Nick steals from Sam.");
+            Nick.Steal(Sam);
 
             // // Show stats of players after attacking
             // System.Console.WriteLine("\n=============================== After Attacking ===============================\n");
@@ -117,7 +100,31 @@ namespace terminal_rpg
             // System.Console.WriteLine("  Hero 3: {0}", Nick.ShowStatus());
             // System.Console.WriteLine("  Hero 4: {0}", Sam.ShowStatus());
 
-            // System.Console.WriteLine("\n");
+            System.Console.WriteLine("\n");
+
+            // Testing
+            Actions actions = new Actions();
+            Program New_Game = new Program();
+            New_Game.Start_Game();
+            Samurai.How_Many();
+            Human Jeff = new Human("Jeff");
+            Zombie zeek1 = new Zombie("zeek");
+            Zombie zeek2 = new Zombie("zeek");
+            Zombie zeek3 = new Zombie("zeek");
+            Grenade grenade = new Grenade();
+            Heal_Potion heal = new Heal_Potion();
+            Enrage enrage = new Enrage();
+            grenade.Add();
+            grenade.Add();
+            grenade.Add();
+            heal.Add();
+            grenade.How_Many();
+            heal.How_Many();
+            enrage.How_Many();
+            grenade.Use(zeek1);
+            System.Console.WriteLine(zeek1.Health);
+            grenade.How_Many();
+            enrage.Use(Jeff);
         }
     }
 }
