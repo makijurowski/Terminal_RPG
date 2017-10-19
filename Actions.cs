@@ -13,11 +13,15 @@ namespace terminal_rpg
         public Dictionary<int, string> KeyMap { get; set; }
 
         // Constructor for Actions class
-        public Actions(string player)
+        // public Actions(string player)
+        public Actions()
         {
-            Player = player;
-            // var methods = typeof(Human).GetMethods(System.Reflection.BindingFlags.Public);
+            // Player = player;
+            var methods = typeof(Human).GetMethods(System.Reflection.BindingFlags.Public);
+            var methods2 = typeof(Human).GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
+            // var methods2 = typeof(Human).GetMethods();
+            System.Console.WriteLine(methods.Length);
+            System.Console.WriteLine(methods2.Length);
         }
     }
-
 }

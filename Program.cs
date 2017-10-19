@@ -4,6 +4,14 @@ namespace terminal_rpg
 {
     class Program
     {
+
+        public void Start_Game()
+        {
+            System.Console.WriteLine("Welcome to Dojo Adventures!");
+            System.Console.WriteLine("Are you ready to play Dojo Adventures? Get hyped...");
+
+        }
+
         // Main method invoked upon running program
         static void Main(string[] args)
         {
@@ -94,6 +102,12 @@ namespace terminal_rpg
             System.Console.WriteLine("  Hero 4: {0}", Sam.ShowStatus());
 
             System.Console.WriteLine("\n");
+
+            // Testing
+            Actions actions = new Actions();
+            Program New_Game = new Program();
+            New_Game.Start_Game();
+            Samurai.How_Many();
         }
     }
 }
