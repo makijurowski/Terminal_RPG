@@ -8,6 +8,7 @@ namespace terminal_rpg
         // Constructor for Spider
         public Spider(string name) : base(name)
         {
+            ClassName = "Spider";
             Health = 200;
         }
     }

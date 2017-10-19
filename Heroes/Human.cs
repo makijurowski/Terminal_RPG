@@ -7,6 +7,8 @@ namespace terminal_rpg
     public class Human
     {
         // Properties for Human class
+        public string ClassName { get; set; }
+        public string Status { get; set; }
         public string Name { get; set; }
         public int Strength { get; set; }
         public int Intelligence { get; set; }
@@ -16,6 +18,8 @@ namespace terminal_rpg
         // Constructor for Human class with default values added (only passes name as argument)
         public Human(string name)
         {
+            ClassName = "Human";
+            Status = "standby";
             Name = name;
             Strength = 3;
             Intelligence = 3;
@@ -26,6 +30,8 @@ namespace terminal_rpg
         // Constructor for Human class without default values (passes all stats as arguments)
         public Human(string name, int strength, int intelligence, int dexterity, int health)
         {
+            ClassName = "Human";
+            Status = "standby";
             Name = name;
             Strength = strength;
             Intelligence = intelligence;
@@ -46,12 +52,14 @@ namespace terminal_rpg
                 }
                 Name = Name += space;
             }
-            string status = String.Format("{0} (HEALTH: {1}; STRENGTH: {2}; DEXTERITY: {3}; INTELLIGENCE: {4})", 
+            string status = String.Format("{0} (CLASS: {1}; HEALTH: {2}; STRENGTH: {3}; DEXTERITY: {4}; INTELLIGENCE: {5}; STATUS: {6})",
                                           Name,
-                                          Health, 
-                                          Strength, 
-                                          Dexterity, 
-                                          Intelligence);
+                                          ClassName,
+                                          Health,
+                                          Strength,
+                                          Dexterity,
+                                          Intelligence,
+                                          Status);
             return status;
         }
 

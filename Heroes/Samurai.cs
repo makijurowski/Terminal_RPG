@@ -11,6 +11,7 @@ namespace terminal_rpg
         // Constructor for Samurai that only takes in name as parameter but sets new defaults for other properties of type Human
         public Samurai(string name) : base(name)
         {
+            ClassName = "Samurai";
             Health = 200;
             Samurai_Count += 1;
         }

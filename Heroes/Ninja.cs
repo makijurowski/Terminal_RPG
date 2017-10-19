@@ -8,6 +8,7 @@ namespace terminal_rpg
         // Constructor for Ninja which only takes name as parameter but sets new default for property of Human
         public Ninja(string name) : base(name)
         {
+            ClassName = "Ninja";
             Dexterity = 75;
         }
 

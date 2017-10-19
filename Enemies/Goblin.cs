@@ -8,6 +8,7 @@ namespace terminal_rpg
         // Constructor for Goblin
         public Goblin(string name) : base(name)
         {
+            ClassName = "Goblin";
             Health = 250;
         }
     }

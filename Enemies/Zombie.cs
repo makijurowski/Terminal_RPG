@@ -8,6 +8,7 @@ namespace terminal_rpg
         // Constructor for Zombie
         public Zombie(string name) : base(name)
         {
+            ClassName = "Zombie";
             Health = 300;
         }
     }

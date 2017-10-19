@@ -8,6 +8,7 @@ namespace terminal_rpg
         // Constructor for GiantBaby
         public GiantBaby(string name) : base(name)
         {
+            ClassName = "GiantBaby";
             Health = 250;
         }
     }

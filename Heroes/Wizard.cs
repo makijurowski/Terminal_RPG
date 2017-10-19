@@ -8,6 +8,7 @@ namespace terminal_rpg
         // Constructor for Wizard that only takes in name as parameter but sets new defaults for other properties of type Human
         public Wizard(string name) : base(name)
         {
+            ClassName = "Wizard";
             Intelligence = 25;
             Health = 50;
         }

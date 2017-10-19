@@ -8,6 +8,7 @@ namespace terminal_rpg
         // Constructor for Scribe which only takes name as parameter but sets new default for property of Human
         public Scribe(string name) : base(name)
         {
+            ClassName = "Scribe";
             Health = 150;
         }
 
