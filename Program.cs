@@ -108,6 +108,24 @@ namespace terminal_rpg
             Program New_Game = new Program();
             New_Game.Start_Game();
             Samurai.How_Many();
+            Human Jeff = new Human("Jeff");
+            Zombie zeek1 = new Zombie("zeek");
+            Zombie zeek2 = new Zombie("zeek");
+            Zombie zeek3 = new Zombie("zeek");
+            Grenade grenade = new Grenade();
+            Heal_Potion heal = new Heal_Potion();
+            Enrage enrage = new Enrage();
+            grenade.Add();
+            grenade.Add();
+            grenade.Add();
+            heal.Add();
+            grenade.How_Many();
+            heal.How_Many();
+            enrage.How_Many();
+            grenade.Use(zeek1);
+            System.Console.WriteLine(zeek1.Health);
+            grenade.How_Many();
+            enrage.Use(Jeff);
         }
     }
 }

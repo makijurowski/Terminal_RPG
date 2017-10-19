@@ -18,8 +18,8 @@ namespace terminal_rpg
             {
             
             Human target = obj as Human;
-            if ( target.Status = dead){
-                target.Status = standby;
+            if ( target.Status == "dead"){
+                target.Status = "standby";
                 target.Health = 100;
                 Count -= 1;
             }
