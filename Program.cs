@@ -9,7 +9,6 @@ namespace terminal_rpg
         {
             System.Console.WriteLine("Welcome to Dojo Adventures!");
             System.Console.WriteLine("Are you ready to play Dojo Adventures? Get hyped...");
-
         }
 
         // Main method invoked upon running program
@@ -49,7 +48,7 @@ namespace terminal_rpg
             System.Console.WriteLine(" Enemy 2: {0}", Timmy.ShowStatus());
             System.Console.WriteLine(" Enemy 3: {0}", Slink.ShowStatus());
             System.Console.WriteLine(" Enemy 4: {0}", Goblix.ShowStatus());
-            
+
             // Attack round
             System.Console.WriteLine("\n=============================== While Attacking ===============================\n");
             System.Console.WriteLine("1. Wanda fireballs me.");

@@ -2,14 +2,10 @@ using System;
 
 namespace terminal_rpg
 {
-    
     public class Heal_Potion : Item
     {
-    
         public Heal_Potion(){
             ClassName = "Heal_Potions";
-            
-
         }
 
         public void Use(object obj)
@@ -24,8 +20,6 @@ namespace terminal_rpg
             else{
                     System.Console.WriteLine("You do not have any {0}", ClassName);
             }
-
         }
-       
     }
 }
