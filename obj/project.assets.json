@@ -664,28 +664,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/mroggers/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\jeffd_000\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mroggers/Google Drive/Dojo/terminal_rpg/terminal_rpg.csproj",
+      "projectUniqueName": "C:\\Users\\jeffd_000\\Desktop\\terminal_rpg\\terminal_rpg\\terminal_rpg.csproj",
       "projectName": "terminal_rpg",
-      "projectPath": "/Users/mroggers/Google Drive/Dojo/terminal_rpg/terminal_rpg.csproj",
-      "packagesPath": "/Users/mroggers/.nuget/packages/",
-      "outputPath": "/Users/mroggers/Google Drive/Dojo/terminal_rpg/obj/",
+      "projectPath": "C:\\Users\\jeffd_000\\Desktop\\terminal_rpg\\terminal_rpg\\terminal_rpg.csproj",
+      "packagesPath": "C:\\Users\\jeffd_000\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jeffd_000\\Desktop\\terminal_rpg\\terminal_rpg\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/mroggers/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jeffd_000\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
