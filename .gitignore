@@ -316,3 +316,7 @@ $RECYCLE.BIN/
 # End of core ignore list, below put you custom 'per project' settings (patterns or path)
 #####
 notes/recursion-fromKay.md
+obj/project.assets.json
+obj/terminal_rpg.csproj.nuget.cache
+obj/terminal_rpg.csproj.nuget.g.props
+obj/terminal_rpg.csproj.nuget.g.targets
