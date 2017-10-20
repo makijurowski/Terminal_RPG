@@ -105,6 +105,11 @@
             // grenade.How_Many();
             // enrage.Use(Jeff);
 
+            // // Create new player of class Human
+            // Human me = new Human("Maki");
+            // me.Health = 200;
+
+
 
 ACTIONS.CS
 

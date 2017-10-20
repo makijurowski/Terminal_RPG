@@ -4,11 +4,52 @@ namespace terminal_rpg
 {
     class Program
     {
+        // Variable to hold string for new line formatting of output
+        public static string newLine = "\n";
+
         // Method used to invoke a new game and select a character
         public void Start_Game()
         {
             int numSelect;
-            string newLine = "\n";
+            string charName;
+
+            // Script for starting the game
+            System.Console.WriteLine("First things first. Let's get acquainted!");
+            System.Console.WriteLine(newLine);
+            System.Console.WriteLine("What's your favorite color?");
+            System.Console.WriteLine(newLine);
+            // Intentionally does nothing
+            Console.ReadLine();
+            System.Console.WriteLine(newLine);
+            System.Console.WriteLine("Hmm... that's a choice, isn't it? Maybe we should try an easier one.\n\nWhat's your name?");
+            System.Console.WriteLine(newLine);
+            // User input for name
+            charName = Console.ReadLine();
+            System.Console.WriteLine(newLine);
+            System.Console.WriteLine("Great job {0}, I knew you could do it!", charName);
+            System.Console.WriteLine(newLine);
+            System.Console.WriteLine("Now, please enter a number to choose which character you would like to play.");
+            System.Console.WriteLine(newLine);
+            System.Console.WriteLine("1. Human");
+            System.Console.WriteLine(newLine);
+            System.Console.WriteLine("2. Wizard");
+            System.Console.WriteLine(newLine);
+            System.Console.WriteLine("3. Samurai");
+            System.Console.WriteLine(newLine);
+            System.Console.WriteLine("4. Ninja");
+            System.Console.WriteLine(newLine);
+            // User input for character class
+            numSelect = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine(newLine);
+
+            MakeChar player = new MakeChar(numSelect, charName);
+        }
+
+        // Main method invoked upon running program
+        static void Main(string[] args)
+        {
+
+            Program New_Game = new Program();
 
             // Greeting for player
             System.Console.WriteLine(newLine);
@@ -16,34 +57,9 @@ namespace terminal_rpg
             System.Console.WriteLine(newLine);
             System.Console.WriteLine("Are you ready to play Dojo Adventures? Get hyped...");
             System.Console.WriteLine(newLine);
-            System.Console.WriteLine("Please enter a number to choose which character you would like to play.");
-            System.Console.WriteLine(newLine);
-            System.Console.WriteLine("1. Human");
-            System.Console.WriteLine("2. Wizard");
-            System.Console.WriteLine("3. Samurai");
-            System.Console.WriteLine("4. Ninja");
-            System.Console.WriteLine(newLine);
 
-            // Get player input
-            numSelect = Convert.ToInt32(Console.ReadLine());
-            System.Console.WriteLine(newLine);
-
-            CharChoice player = new CharChoice(numSelect);
-        }
-
-        // Main method invoked upon running program
-        static void Main(string[] args)
-        {
-
-            // // Create new player of class Human
-            // Human me = new Human("Maki");
-            // me.Health = 200;
-
-            Program New_Game = new Program();
+            // Initiate a new Game
             New_Game.Start_Game();
-
-            System.Console.WriteLine("\n");
-
         }
     }
 }
