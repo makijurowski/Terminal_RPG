@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{C25033A6-DD0D-4777-B9CE-737C4E8532BA}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Heroes/Ninja.cs">
+    <Files>
+      <File FileName="Program.cs" Line="93" Column="13" />
+      <File FileName="Gameplay/Human_Choices.cs" Line="1" Column="1" />
+      <File FileName="Heroes/Ninja.cs" Line="19" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.terminal__rpg PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
