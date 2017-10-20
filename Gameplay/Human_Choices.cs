@@ -8,7 +8,6 @@ namespace terminal_rpg
         public Human_Choices(string charName)
         {
             Human player = new Human(charName);
-            Goblin enemy = new Goblin("Goblix");
             System.Console.WriteLine("\nHere are your stats...\n");
             System.Console.WriteLine("Current Player: {0}", player.ShowStatus());
             Human_Choices.Choose_Action(player);
@@ -17,6 +16,7 @@ namespace terminal_rpg
         public static void Choose_Action(Human player)
         {
             int numSelect;
+            Goblin enemy = new Goblin("Goblix");
             System.Console.WriteLine("\nOh no! A big, evil, scary-looking thing appeared...");
             // Get user input for selection
             System.Console.WriteLine(Program.newLine);
@@ -32,10 +32,16 @@ namespace terminal_rpg
             switch (numSelect)
             {
                 case 1:
-                    System.Console.WriteLine("You chose {0}!", player.Actions[1]);
+                    System.Console.WriteLine("You chose {0} on {1} the {2}!", player.Actions[1], enemy.Name, enemy.ClassName);
+                    player.Attack(enemy);
+                    System.Console.WriteLine(Program.newLine);
+                    System.Console.WriteLine("Your current stats: {0}\n", player.ShowStatus());
+                    System.Console.WriteLine("Enemy current stats: {0}\n", enemy.ShowStatus());
                     break;
                 case 2:
                     System.Console.WriteLine("You chose {0}!", player.Actions[2]);
+                    System.Console.WriteLine(Program.newLine);
+                    System.Console.WriteLine("Your current stats: {0}\n", player.ShowStatus());
                     break;
                 default:
                     System.Console.WriteLine("Learn how to number!");

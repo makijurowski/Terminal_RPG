@@ -21,7 +21,7 @@ namespace terminal_rpg
             // Intentionally does nothing
             Console.ReadLine();
             System.Console.WriteLine(newLine);
-            System.Console.WriteLine("Hmm... that's a choice, isn't it? Maybe we should try an easier one.\n\nWhat's your name?");
+            System.Console.WriteLine("Hmm... now that's a choice, isn't it? Maybe we should try an easier one.\n\nWhat's your name?");
             System.Console.WriteLine(newLine);
             // User input for name
             charName = Console.ReadLine();
