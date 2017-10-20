@@ -1,9 +1,14 @@
 ﻿<Properties StartupConfiguration="{C25033A6-DD0D-4777-B9CE-737C4E8532BA}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Heroes/Ninja.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="gameTest/Class1.cs">
     <Files>
-      <File FileName="Program.cs" Line="93" Column="13" />
+      <File FileName="Program.cs" Line="133" Column="15" />
       <File FileName="Gameplay/Human_Choices.cs" Line="1" Column="1" />
-      <File FileName="Heroes/Ninja.cs" Line="19" Column="10" />
+      <File FileName="Heroes/Ninja.cs" Line="22" Column="25" />
+      <File FileName="gameTest/Class1.cs" Line="28" Column="29" />
+      <File FileName="gameTest/obj/Debug/netstandard2.0/gameTest.AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Heroes/Human.cs" Line="34" Column="32" />
+      <File FileName="Gameplay/Wizard_Choices.cs" Line="1" Column="1" />
+      <File FileName="Heroes/Wizard.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
