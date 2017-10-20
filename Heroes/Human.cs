@@ -15,11 +15,7 @@ namespace terminal_rpg
         public int Intelligence { get; set; }
         public int Dexterity { get; set; }
         public int Health { get; set; }
-        public static Dictionary<int, string> Actions = new Dictionary<int, string>()
-            {
-                { 1, "Attack" },
-                { 2, "ShowStatus" }
-            };
+        public Dictionary<int, string> Actions { get; set; }
 
         // Constructor for Human class with default values added (only passes name as argument)
         public Human(string name)
@@ -31,6 +27,12 @@ namespace terminal_rpg
             Intelligence = 3;
             Dexterity = 3;
             Health = 100;
+
+            Actions = new Dictionary<int, string>()
+            {
+                { 1, "Attack" },
+                { 2, "ShowStatus" }
+            };
         }
 
         // Constructor for Human class without default values (passes all stats as arguments)
@@ -43,6 +45,12 @@ namespace terminal_rpg
             Intelligence = intelligence;
             Dexterity = dexterity;
             Health = health;
+
+            Actions = new Dictionary<int, string>()
+            {
+                { 1, "Attack" },
+                { 2, "ShowStatus" }
+            };
         }
 
         // Method to show the status of the current player
