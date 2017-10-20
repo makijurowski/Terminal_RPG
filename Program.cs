@@ -5,6 +5,7 @@ namespace terminal_rpg
     class Program
     {
         // Variable to hold string for new line formatting of output
+        public static object obj;
         public static string newLine = "\n";
 
         // Method used to invoke a new game and select a character
@@ -22,19 +23,18 @@ namespace terminal_rpg
             // Intentionally does nothing
             Console.ReadLine();
             System.Console.WriteLine(newLine);
-            System.Console.WriteLine("Hmm... now that's a, uh, choice, isn't it? Maybe we should try an easier one.\n\n");
+            System.Console.WriteLine("Hmm... well that's a, uh, choice now, isn't it? Maybe we should try an easier one.\n");
+            System.Console.WriteLine(newLine);
             System.Console.ReadKey();
-            System.Console.WriteLine("What's your name?");
+            System.Console.WriteLine("So what's your name?");
             System.Console.WriteLine(newLine);
             // User input for name
             charName = Console.ReadLine();
-            System.Console.WriteLine(newLine);
             System.Console.WriteLine("Great job {0}, I knew you could do it!", charName);
             System.Console.WriteLine(newLine);
             System.Console.ReadKey();
             System.Console.WriteLine("Now, please enter a number to choose which character you would like to play.");
             System.Console.WriteLine(newLine);
-            System.Console.ReadKey();
             System.Console.WriteLine("1. Human");
             System.Console.WriteLine(newLine);
             System.Console.WriteLine("2. Wizard");
@@ -50,6 +50,40 @@ namespace terminal_rpg
             MakeChar player = new MakeChar(numSelect, charName);
         }
 
+        public class MakeEnemy
+        {
+            public string Name { get; set; }
+            public string ClassName { get; set; }
+            
+            public MakeEnemy()
+            {
+                string[] names = {"Carl", "Samantha", "Robocop", "Blaine", "Roblox", "Goblix", "Jimmy", "Mr. Spanx"};
+                Random random = new Random();
+                int randomChance = random.Next(1, 5);
+                int randomName = random.Next(1, 10);
+
+                switch(randomChance)
+                {
+                    case 1:
+                        Goblin goblinEnemy = new Goblin(names[randomName]);
+                        obj = goblinEnemy;
+                        break;
+                    case 2:
+                        Spider spiderEnemy = new Spider(names[randomName]);
+                        obj = spiderEnemy;
+                        break;
+                    case 3:
+                        Zombie zombieEnemy = new Zombie(names[randomName]);
+                        obj = zombieEnemy;
+                        break;
+                    case 4:
+                        GiantBaby giantBabyEnemy = new GiantBaby(names[randomName]);
+                        obj = giantBabyEnemy;
+                        break;
+                }
+            }
+        }
+
         // Make a new character based on player's choice
         public class MakeChar
         {
@@ -58,10 +92,11 @@ namespace terminal_rpg
                 int Choice = numSelect;
                 string CharName = charName;
 
-                switch (Choice)
+                switch(Choice)
                 {
                     case 1:
-                        System.Console.WriteLine("You chose human!");
+                        System.Console.WriteLine("You chose to live it up as a human in a fantasy game!");
+                        System.Console.WriteLine(Program.newLine);
                         System.Console.ReadKey();
                         Human_Choices humanPlayer = new Human_Choices(charName);
                         break;

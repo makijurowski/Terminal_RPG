@@ -12,9 +12,12 @@ namespace terminal_rpg
             ClassName = "Item";
         }
 
-        public int Add()
+        public int Add(object obj)
         {
-            return Count += 1;
+            Count += 1;
+            Human player = obj as Human;
+            player.Inventory[ClassName] = Count;
+            return Count;
         }
         
         public void How_Many()

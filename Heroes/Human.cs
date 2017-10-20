@@ -16,6 +16,7 @@ namespace terminal_rpg
         public int Dexterity { get; set; }
         public int Health { get; set; }
         public Dictionary<int, string> Actions { get; set; }
+        public Dictionary<string, int> Inventory { get; set; }
 
         // Constructor for Human class with default values added (only passes name as argument)
         public Human(string name)
@@ -31,10 +32,20 @@ namespace terminal_rpg
             Actions = new Dictionary<int, string>()
             {
                 { 1, "Attack" },
-                { 2, "ShowStatus" }
+                { 2, "Show Current Stats" },
+                { 3, "Do Homework" },
+                { 4, "Check Inventory" }
+            };
+
+            Inventory = new Dictionary<string, int>()
+            {
+                { "Enrage", 0 },
+                { "Grenade", 2 },
+                { "Heal_Potion", 3 },
+                { "Insta_Kill", 0 },
+                { "Revive", 1 }
             };
         }
-
         // Constructor for Human class without default values (passes all stats as arguments)
         public Human(string name, int strength, int intelligence, int dexterity, int health)
         {
@@ -66,14 +77,13 @@ namespace terminal_rpg
                 }
                 Name = Name += space;
             }
-            string status = String.Format("{0} (CLASS: {1}; HEALTH: {2}; STRENGTH: {3}; DEXTERITY: {4}; INTELLIGENCE: {5}; STATUS: {6})",
+            string status = String.Format("{0} (CLASS: {1}; HEALTH: {2}; STRENGTH: {3}; DEXTERITY: {4}; INTELLIGENCE: {5};)",
                                           Name,
                                           ClassName,
                                           Health,
                                           Strength,
                                           Dexterity,
-                                          Intelligence,
-                                          Status);
+                                          Intelligence);
             return status;
         }
 
