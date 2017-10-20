@@ -8,7 +8,13 @@ namespace terminal_rpg
     {
         // Properties for the Samurai class
         public static int Samurai_Count = 0;
-        public Dictionary<int, string> Samurai_Actions { get; set; }
+        public static Dictionary<int, string> Actions = new Dictionary<int, string>()
+            {
+                { 1, "Attack" },
+                { 2, "Meditate" },
+                { 3, "Death_Blow" },
+                { 4, "How_Many" }
+            };
 
         // Constructor for Samurai that only takes in name as parameter but sets new defaults for other properties of type Human
         public Samurai(string name) : base(name)
@@ -16,13 +22,13 @@ namespace terminal_rpg
             ClassName = "Samurai";
             Health = 200;
             Samurai_Count += 1;
-            Samurai_Actions = new Dictionary<int, string>()
-            {
-                { 1, "Attack" },
-                { 2, "Meditate" },
-                { 3, "Death_Blow" },
-                { 4, "How_Many" }
-            };
+            // Samurai_Actions = new Dictionary<int, string>()
+            // {
+            //     { 1, "Attack" },
+            //     { 2, "Meditate" },
+            //     { 3, "Death_Blow" },
+            //     { 4, "How_Many" }
+            // };
         }
 
         // Method used to log the number of samurais that have been created

@@ -24,11 +24,15 @@ namespace terminal_rpg
             Ninja Nick = new Ninja("Nick");
             Samurai Sam = new Samurai("Sam");
 
+
+
+
             // Create new enemies
             Zombie Zeek = new Zombie("Zeek");
             GiantBaby Timmy = new GiantBaby("Timmy");
             Spider Slink = new Spider("Slink");
             Goblin Goblix = new Goblin("Goblix");
+
 
             // Show stats of players at the beginning of the game
             System.Console.WriteLine("\n\n============================== Before Attacking ===============================\n");
@@ -106,7 +110,17 @@ namespace terminal_rpg
             Actions actions = new Actions();
             Program New_Game = new Program();
             New_Game.Start_Game();
+
+
+
+
+
             Samurai.How_Many();
+
+
+
+
+
             Human Jeff = new Human("Jeff");
             Zombie zeek1 = new Zombie("zeek");
             Zombie zeek2 = new Zombie("zeek");

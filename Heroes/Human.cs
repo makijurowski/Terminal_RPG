@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 // TO-DO: Change player as enemy to object of Enemy class
 
 namespace terminal_rpg
@@ -14,6 +15,11 @@ namespace terminal_rpg
         public int Intelligence { get; set; }
         public int Dexterity { get; set; }
         public int Health { get; set; }
+        public static Dictionary<int, string> Actions = new Dictionary<int, string>()
+            {
+                { 1, "Attack" },
+                { 2, "ShowStatus" }
+            };
 
         // Constructor for Human class with default values added (only passes name as argument)
         public Human(string name)
