@@ -42,7 +42,6 @@ namespace gameTest
         }
 
         [Fact]
-        //supposed to fail, health damage is random
         public void WizardFireballTest()
         {
             testWizard.Fireball(testplayer);
