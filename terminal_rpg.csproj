@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit.runner.console" Version="2.3.0" />
+    <PackageReference Include="xunit" Version="2.3.0" />
+    <!-- <ProjectReference Include="gameTest/gameTest.csproj" /> -->
+  </ItemGroup>
 </Project>
