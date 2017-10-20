@@ -45,12 +45,45 @@ namespace terminal_rpg
             MakeChar player = new MakeChar(numSelect, charName);
         }
 
+        // Make a new character based on player's choice
+        public class MakeChar
+        {
+            public MakeChar(int numSelect, string charName)
+            {
+                int Choice = numSelect;
+                string CharName = charName;
+
+                switch (Choice)
+                {
+                    case 1:
+                        System.Console.WriteLine("You chose human!");
+                        Human_Choices humanPlayer = new Human_Choices(charName);
+                        break;
+                    case 2:
+                        System.Console.WriteLine("You chose wizard!");
+                        Wizard_Choices wizardPlayer = new Wizard_Choices(charName);
+                        break;
+                    case 3:
+                        System.Console.WriteLine("You chose samurai!");
+                        Samurai_Choices samuraiPlayer = new Samurai_Choices(charName);
+                        break;
+                    case 4:
+                        System.Console.WriteLine("You chose ninja!");
+                        Ninja_Choices ninjaPlayer = new Ninja_Choices(charName);
+                        break;
+                    default:
+                        System.Console.WriteLine("You entered an invalid choice. Please try again.");
+                        numSelect = Convert.ToInt32(Console.ReadLine());
+                        System.Console.WriteLine(Program.newLine);
+                        MakeChar player = new MakeChar(numSelect, charName);
+                        break;
+                }
+            }
+        }
+
         // Main method invoked upon running program
         static void Main(string[] args)
         {
-
-            Program New_Game = new Program();
-
             // Greeting for player
             System.Console.WriteLine(newLine);
             System.Console.WriteLine("Welcome to Dojo Adventures!");
@@ -59,6 +92,7 @@ namespace terminal_rpg
             System.Console.WriteLine(newLine);
 
             // Initiate a new Game
+            Program New_Game = new Program();
             New_Game.Start_Game();
         }
     }
