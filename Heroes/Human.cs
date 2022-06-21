@@ -45,7 +45,8 @@ namespace terminal_rpg
                 { "Insta_Kill", 0 },
                 { "Revive", 1 }
             };
-        }
+        }//end of Human
+
         // Constructor for Human class without default values (passes all stats as arguments)
         public Human(string name, int strength, int intelligence, int dexterity, int health)
         {
@@ -62,24 +63,14 @@ namespace terminal_rpg
                 { 1, "Attack" },
                 { 2, "ShowStatus" }
             };
-        }
+        }//end of Human
 
         // Method to show the status of the current player
         public string ShowStatus()
         {
-            if (Name.Length < 10)
-            {
-                int numSpaces = 10 - Name.Length;
-                string space = " ";
-                for (int i = 0; i < numSpaces; i++)
-                {
-                    space += " ";
-                }
-                Name = Name += space;
-            }
-            string status = string.Format($"{Name} (Class: {ClassName}; Health: {Health}; Strength: {Strength}; Dexterity: {Dexterity}; Intelligence: {Intelligence};");
+            string status = string.Format($"{Name,-10} (Class: {ClassName}; Health: {Health}; Strength: {Strength}; Dexterity: {Dexterity}; Intelligence: {Intelligence};");
             return status;
-        }
+        }//end of ShowStatus
 
         // Method used to attack another player passed by reference
         public void Attack(object obj)
@@ -93,6 +84,6 @@ namespace terminal_rpg
             {
                 enemy.Health -= Strength * 5;
             }
-        }
-    }
-}
+        }//end of Attack
+    }//eoc
+}//eon
