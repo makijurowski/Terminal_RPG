@@ -15,11 +15,11 @@ namespace terminal_rpg
             Count -= 1;
             Human target = obj as Human;
             target.Health = 0;
-            Console.WriteLine("INSTA KILL!!!! {0} suddenly dropped dead.", target.Name);
+            Console.WriteLine($"INSTA KILL!!!! {target.Name} suddenly dropped dead.");
             }
             else{
-                    Console.WriteLine("You do not have any {0}", ClassName);
+                    Console.WriteLine($"You do not have any {ClassName}");
             }
-        }
-    }
-}
+        }//eom
+    }//eoc
+}//eon
