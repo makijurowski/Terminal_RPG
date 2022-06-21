@@ -24,7 +24,7 @@ namespace terminal_rpg
             Console.Write("So what's your name? ");
             // User input for name
             charName = Console.ReadLine();
-            Console.WriteLine("Great job {0}, I knew you could do it!", charName);
+            Console.WriteLine($"Great job {charName}, I knew you could do it!");
             Console.ReadKey();
             Console.WriteLine("Now, please enter a number to choose which character you would like to play.");
             Console.WriteLine("1. Human");
