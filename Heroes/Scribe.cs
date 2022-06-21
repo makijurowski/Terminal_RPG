@@ -10,13 +10,13 @@ namespace terminal_rpg
         {
             ClassName = "Scribe";
             Health = 150;
-        }
+        }//eom
 
         // Method used for the Scribe to heal, increasing their health
         public void Write_Poetry()
         {
             Health += 15;
-        }
+        }//end of Write_Poetry
 
         // Method used to attack another player (passed by reference)
         public void Quill_Stab(object obj)
@@ -30,6 +30,6 @@ namespace terminal_rpg
             {
                 Attack(enemy);
             }
-        }
-    }
-}
+        }//end of Quill_Stab
+    }//eoc
+}//eon
