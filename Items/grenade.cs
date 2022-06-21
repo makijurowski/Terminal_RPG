@@ -20,7 +20,7 @@ namespace terminal_rpg
             }
             else
             {
-                Console.WriteLine("You do not have any {0}", ClassName);
+                Console.WriteLine($"You do not have any {ClassName}");
             }
         }
 
@@ -37,7 +37,7 @@ namespace terminal_rpg
             }
             else
             {
-                Console.WriteLine("You do not have any {0}", ClassName);
+                Console.WriteLine($"You do not have any {ClassName}");
             }
         }
 
@@ -55,8 +55,8 @@ namespace terminal_rpg
             }
             else
             {
-                Console.WriteLine("You do not have any {0}", ClassName);
+                Console.WriteLine($"You do not have any {ClassName}");
             }
-        }
-    }
-}
+        }//eom
+    }//eoc
+}//eon
