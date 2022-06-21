@@ -22,19 +22,19 @@ namespace terminal_rpg
                 { 3, "Death_Blow" },
                 { 4, "How_Many" }
             };
-        }
+        }// end of Samurai
 
         // Method used to log the number of samurais that have been created
         public static void How_Many()
         {
-            Console.WriteLine("Number of Samurais: {0}", Samurai_Count);
-        }
+            Console.WriteLine($"Number of Samurais: {Samurai_Count}");
+        }//end of How_Many
 
         // Method used to restore health to the Samurai who invokes it
         public void Meditate()
         {
             Health = 200;
-        }
+        }//end of Meditate
 
         // Method used to attack another player passed by reference
         public void Death_Blow(object obj)
@@ -52,6 +52,6 @@ namespace terminal_rpg
             {
                 Console.WriteLine("Death_Blow failed. This player has over 50 health.");
             }
-        }
-    }
-}
+        }//end of Death_Blow
+    }//eoc
+}//eon
