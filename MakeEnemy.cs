@@ -8,7 +8,7 @@ namespace terminal_rpg
 {
     public class MakeEnemy
     {
-        public static object obj;
+        private static object obj;
         public string Name { get; set; }
         public string ClassName { get; set; }
 
@@ -37,7 +37,7 @@ namespace terminal_rpg
                     GiantBaby giantBabyEnemy = new(names[randomName]);
                     obj = giantBabyEnemy;
                     break;
-            }
-        }
-    }
-}
+            }//end switch
+        }//eom
+    }//eoc
+}//eon
