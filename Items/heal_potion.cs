@@ -15,11 +15,11 @@ namespace terminal_rpg
             Count -= 1;
             Human target = obj as Human;
             target.Health += 15;
-            Console.WriteLine("{0} received +15 hp", target.Name);
+            Console.WriteLine($"{target.Name} received +15 hp");
             }
             else{
-                    Console.WriteLine("You do not have any {0}", ClassName);
+                    Console.WriteLine($"You do not have any {ClassName}");
             }
-        }
-    }
-}
+        }//eom
+    }//eoc
+}//eon
