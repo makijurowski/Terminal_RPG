@@ -5,7 +5,6 @@ namespace terminal_rpg
     class Program
     {
         // Variable to hold string for new line formatting of output
-        public static object obj;
         public static string newLine = "\n";
 
         // Method used to invoke a new game and select a character
@@ -36,82 +35,7 @@ namespace terminal_rpg
             // User input for character class
             numSelect = Convert.ToInt32(Console.ReadLine());
             MakeChar player = new (numSelect, charName);
-        }
-
-        public class MakeEnemy
-        {
-            public string Name { get; set; }
-            public string ClassName { get; set; }
-            
-            public MakeEnemy()
-            {
-                string[] names = {"Carl", "Samantha", "Robocop", "Blaine", "Roblox", "Goblix", "Jimmy", "Mr. Spanx"};
-                Random random = new ();
-                int randomChance = random.Next(1, 5);
-                int randomName = random.Next(1, 10);
-
-                switch(randomChance)
-                {
-                    case 1:
-                        Goblin goblinEnemy = new (names[randomName]);
-                        obj = goblinEnemy;
-                        break;
-                    case 2:
-                        Spider spiderEnemy = new (names[randomName]);
-                        obj = spiderEnemy;
-                        break;
-                    case 3:
-                        Zombie zombieEnemy = new (names[randomName]);
-                        obj = zombieEnemy;
-                        break;
-                    case 4:
-                        GiantBaby giantBabyEnemy = new (names[randomName]);
-                        obj = giantBabyEnemy;
-                        break;
-                }
-            }
-        }
-
-        // Make a new character based on player's choice
-        public class MakeChar
-        {
-            public MakeChar(int numSelect, string charName)
-            {
-                int Choice = numSelect;
-                string CharName = charName;
-
-                switch(Choice)
-                {
-                    case 1:
-                        Console.WriteLine("You chose to live it up as a human in a fantasy game!");
-                        Console.ReadKey();
-                        Human_Choices humanPlayer = new (charName);
-                        break;
-                    case 2:
-                        Console.WriteLine("You chose wizard!");
-                        Console.ReadKey();
-                        Wizard_Choices wizardPlayer = new (charName);
-                        break;
-                    case 3:
-                        Console.WriteLine("You chose samurai!");
-                        Console.ReadKey();
-                        Samurai_Choices samuraiPlayer = new (charName);
-                        break;
-                    case 4:
-                        Console.WriteLine("You chose ninja!");
-                        Console.ReadKey();
-                        Ninja_Choices ninjaPlayer = new (charName);
-                        break;
-                    default:
-                        Console.WriteLine("You entered an invalid choice. Please try again.");
-                        Console.ReadKey();
-                        numSelect = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine(newLine);
-                        MakeChar player = new (numSelect, charName);
-                        break;
-                }
-            }
-        }
+        }      
 
         // Main method invoked upon running program
         static void Main(string[] args)
