@@ -24,7 +24,7 @@ namespace terminal_rpg
             Human enemy = obj as Human;
             if (enemy == null)
             {
-                System.Console.WriteLine("Steal failed. This player does not exist.");
+                Console.WriteLine("Steal failed. This player does not exist.");
             }
             else
             {

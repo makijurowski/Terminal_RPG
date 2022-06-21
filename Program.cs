@@ -15,26 +15,27 @@ namespace terminal_rpg
             string charName;
 
             // Script for starting the game
-            System.Console.WriteLine("\nFirst things first. Let's get acquainted!");
-            System.Console.ReadKey();
-            System.Console.WriteLine("What's your favorite color?");
+            Console.WriteLine("\nFirst things first. Let's get acquainted!");
+            Console.ReadKey();
+            Console.Write("What's your favorite color? ");
             // Intentionally does nothing
             Console.ReadLine();
-            System.Console.WriteLine("Hmm... well that's a, uh, choice now, isn't it? Maybe we should try an easier one.\n");
-            System.Console.ReadKey();
-            System.Console.WriteLine("So what's your name?");
+            Console.WriteLine("Hmm... well that's a, uh, choice now, isn't it? Maybe we should try an easier one.\n");
+            Console.ReadKey();
+            Console.Write("So what's your name? ");
             // User input for name
             charName = Console.ReadLine();
-            System.Console.WriteLine("Great job {0}, I knew you could do it!", charName);
-            System.Console.ReadKey();
-            System.Console.WriteLine("Now, please enter a number to choose which character you would like to play.");
-            System.Console.WriteLine("1. Human");
-            System.Console.WriteLine("2. Wizard");
-            System.Console.WriteLine("3. Samurai");
-            System.Console.WriteLine("4. Ninja");
+            Console.WriteLine("Great job {0}, I knew you could do it!", charName);
+            Console.ReadKey();
+            Console.WriteLine("Now, please enter a number to choose which character you would like to play.");
+            Console.WriteLine("1. Human");
+            Console.WriteLine("2. Wizard");
+            Console.WriteLine("3. Samurai");
+            Console.WriteLine("4. Ninja");
+            Console.Write("Select: ");
             // User input for character class
             numSelect = Convert.ToInt32(Console.ReadLine());
-            MakeChar player = new MakeChar(numSelect, charName);
+            MakeChar player = new (numSelect, charName);
         }
 
         public class MakeEnemy
@@ -82,31 +83,31 @@ namespace terminal_rpg
                 switch(Choice)
                 {
                     case 1:
-                        System.Console.WriteLine("You chose to live it up as a human in a fantasy game!");
-                        System.Console.ReadKey();
-                        Human_Choices humanPlayer = new Human_Choices(charName);
+                        Console.WriteLine("You chose to live it up as a human in a fantasy game!");
+                        Console.ReadKey();
+                        Human_Choices humanPlayer = new (charName);
                         break;
                     case 2:
-                        System.Console.WriteLine("You chose wizard!");
-                        System.Console.ReadKey();
-                        Wizard_Choices wizardPlayer = new Wizard_Choices(charName);
+                        Console.WriteLine("You chose wizard!");
+                        Console.ReadKey();
+                        Wizard_Choices wizardPlayer = new (charName);
                         break;
                     case 3:
-                        System.Console.WriteLine("You chose samurai!");
-                        System.Console.ReadKey();
-                        Samurai_Choices samuraiPlayer = new Samurai_Choices(charName);
+                        Console.WriteLine("You chose samurai!");
+                        Console.ReadKey();
+                        Samurai_Choices samuraiPlayer = new (charName);
                         break;
                     case 4:
-                        System.Console.WriteLine("You chose ninja!");
-                        System.Console.ReadKey();
-                        Ninja_Choices ninjaPlayer = new Ninja_Choices(charName);
+                        Console.WriteLine("You chose ninja!");
+                        Console.ReadKey();
+                        Ninja_Choices ninjaPlayer = new (charName);
                         break;
                     default:
-                        System.Console.WriteLine("You entered an invalid choice. Please try again.");
-                        System.Console.ReadKey();
+                        Console.WriteLine("You entered an invalid choice. Please try again.");
+                        Console.ReadKey();
                         numSelect = Convert.ToInt32(Console.ReadLine());
-                        System.Console.WriteLine(Program.newLine);
-                        MakeChar player = new MakeChar(numSelect, charName);
+                        Console.WriteLine(Program.newLine);
+                        MakeChar player = new (numSelect, charName);
                         break;
                 }
             }
@@ -139,19 +140,19 @@ namespace terminal_rpg
              @"                                                                                  ",
              @"                                                                                  ",
             };
-            // System.Console.WindowWidth = 160;
-            System.Console.WriteLine("\n\n");
+            // Console.WindowWidth = 160;
+            Console.WriteLine("\n\n");
             foreach (string line in nameArr)
             {
-                System.Console.WriteLine(line);
+                Console.WriteLine(line);
             }
-            System.Console.ReadKey();
+            Console.ReadKey();
             // Greeting for player
-            System.Console.WriteLine(newLine);
-            System.Console.WriteLine("Welcome to Dojo Adventures!");
-            System.Console.ReadKey();
-            System.Console.WriteLine("Are you ready to play Dojo Adventures? Get your hype pants on...\n");
-            System.Console.ReadKey();
+            Console.WriteLine(newLine);
+            Console.WriteLine("Welcome to Dojo Adventures!");
+            Console.ReadKey();
+            Console.WriteLine("Are you ready to play Dojo Adventures? Get your hype pants on...\n");
+            Console.ReadKey();
 
             // Initiate a new Game
             Program New_Game = new Program();

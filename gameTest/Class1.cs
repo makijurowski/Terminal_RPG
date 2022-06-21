@@ -5,8 +5,8 @@ namespace gameTest
 {
     public class Class1
     {
-        Human testplayer = new Human("Test");
-        Wizard testWizard = new Wizard("Test");
+        Human testplayer = new ("Test");
+        Wizard testWizard = new ("Test");
         [Fact]
         public void HumanActionTest()
         {

@@ -22,12 +22,12 @@ namespace terminal_rpg
                 }
                 else
                 {
-                    System.Console.WriteLine("{0} has been rasied from the dead!", target.Name);
+                    Console.WriteLine("{0} has been rasied from the dead!", target.Name);
                 }
             }
             else
             {
-                System.Console.WriteLine("You do not have any {0}", ClassName);
+                Console.WriteLine("You do not have any {0}", ClassName);
             }
         }
     }

@@ -93,7 +93,7 @@ namespace terminal_rpg
             Human enemy = obj as Human;
             if (enemy == null)
             {
-                System.Console.WriteLine("Attack failed. This player does not exist.");
+                Console.WriteLine("Attack failed. This player does not exist.");
             }
             else
             {

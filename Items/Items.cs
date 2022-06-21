@@ -22,7 +22,7 @@ namespace terminal_rpg
         
         public void How_Many()
         {
-            System.Console.WriteLine("Number of {0}: {1}", ClassName, Count);
+            Console.WriteLine("Number of {0}: {1}", ClassName, Count);
         }
     }
 }

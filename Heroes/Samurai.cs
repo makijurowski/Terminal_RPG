@@ -27,7 +27,7 @@ namespace terminal_rpg
         // Method used to log the number of samurais that have been created
         public static void How_Many()
         {
-            System.Console.WriteLine("Number of Samurais: {0}", Samurai_Count);
+            Console.WriteLine("Number of Samurais: {0}", Samurai_Count);
         }
 
         // Method used to restore health to the Samurai who invokes it
@@ -42,7 +42,7 @@ namespace terminal_rpg
             Human enemy = obj as Human;
             if (enemy == null)
             {
-                System.Console.WriteLine("Death_Blow failed. This player does not exist.");
+                Console.WriteLine("Death_Blow failed. This player does not exist.");
             }
             else if (enemy.Health < 50)
             {
@@ -50,7 +50,7 @@ namespace terminal_rpg
             }
             else
             {
-                System.Console.WriteLine("Death_Blow failed. This player has over 50 health.");
+                Console.WriteLine("Death_Blow failed. This player has over 50 health.");
             }
         }
     }

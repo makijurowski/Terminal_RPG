@@ -6,8 +6,8 @@ namespace terminal_rpg
     {
         public Ninja_Choices(string charName)
         {
-            Ninja player = new Ninja(charName);
-            System.Console.WriteLine("Current Player: {0}", player.ShowStatus());
+            Ninja player = new (charName);
+            Console.WriteLine("Current Player: {0}", player.ShowStatus());
         }
     }
 }

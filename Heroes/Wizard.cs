@@ -26,7 +26,7 @@ namespace terminal_rpg
             Random random = new Random();
             if (enemy == null)
             {
-                System.Console.WriteLine("Fireball failed. This player does not exist.");
+                Console.WriteLine("Fireball failed. This player does not exist.");
             }
             else
             {

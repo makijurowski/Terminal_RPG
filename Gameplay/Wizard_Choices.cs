@@ -7,7 +7,7 @@ namespace terminal_rpg
         public Wizard_Choices(string charName)
         {
             Wizard player = new Wizard(charName);
-            System.Console.WriteLine("Current Player: {0}", player.ShowStatus());
+            Console.WriteLine("Current Player: {0}", player.ShowStatus());
         }
     }
 }
