@@ -17,36 +17,23 @@ namespace terminal_rpg
             // Script for starting the game
             System.Console.WriteLine("\nFirst things first. Let's get acquainted!");
             System.Console.ReadKey();
-            System.Console.WriteLine(newLine);
             System.Console.WriteLine("What's your favorite color?");
-            System.Console.WriteLine(newLine);
             // Intentionally does nothing
             Console.ReadLine();
-            System.Console.WriteLine(newLine);
             System.Console.WriteLine("Hmm... well that's a, uh, choice now, isn't it? Maybe we should try an easier one.\n");
-            System.Console.WriteLine(newLine);
             System.Console.ReadKey();
             System.Console.WriteLine("So what's your name?");
-            System.Console.WriteLine(newLine);
             // User input for name
             charName = Console.ReadLine();
             System.Console.WriteLine("Great job {0}, I knew you could do it!", charName);
-            System.Console.WriteLine(newLine);
             System.Console.ReadKey();
             System.Console.WriteLine("Now, please enter a number to choose which character you would like to play.");
-            System.Console.WriteLine(newLine);
             System.Console.WriteLine("1. Human");
-            System.Console.WriteLine(newLine);
             System.Console.WriteLine("2. Wizard");
-            System.Console.WriteLine(newLine);
             System.Console.WriteLine("3. Samurai");
-            System.Console.WriteLine(newLine);
             System.Console.WriteLine("4. Ninja");
-            System.Console.WriteLine(newLine);
             // User input for character class
             numSelect = Convert.ToInt32(Console.ReadLine());
-            System.Console.WriteLine(newLine);
-
             MakeChar player = new MakeChar(numSelect, charName);
         }
 
@@ -96,7 +83,6 @@ namespace terminal_rpg
                 {
                     case 1:
                         System.Console.WriteLine("You chose to live it up as a human in a fantasy game!");
-                        System.Console.WriteLine(Program.newLine);
                         System.Console.ReadKey();
                         Human_Choices humanPlayer = new Human_Choices(charName);
                         break;
@@ -164,7 +150,6 @@ namespace terminal_rpg
             System.Console.WriteLine(newLine);
             System.Console.WriteLine("Welcome to Dojo Adventures!");
             System.Console.ReadKey();
-            System.Console.WriteLine(newLine);
             System.Console.WriteLine("Are you ready to play Dojo Adventures? Get your hype pants on...\n");
             System.Console.ReadKey();
 
