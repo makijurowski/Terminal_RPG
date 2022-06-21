@@ -12,8 +12,8 @@ namespace terminal_rpg
             Console.ReadKey();
             Console.WriteLine($"Current Player: {player.ShowStatus()}");
             Console.ReadKey();
-            Human_Choices.Choose_Action(player);
-        }
+            Choose_Action(player);
+        }//end of Human_Choices
 
         public static void Choose_Action(Human player)
         {
@@ -76,7 +76,7 @@ namespace terminal_rpg
                     Console.ReadKey();
                     Choose_Action(player);
                     break;
-            }
-        }
-    }
-}
+            }//end switch
+        }//end of Choose_Action
+    }//eoc
+}//eon
