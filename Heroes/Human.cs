@@ -77,13 +77,7 @@ namespace terminal_rpg
                 }
                 Name = Name += space;
             }
-            string status = String.Format("{0} (CLASS: {1}; HEALTH: {2}; STRENGTH: {3}; DEXTERITY: {4}; INTELLIGENCE: {5};)",
-                                          Name,
-                                          ClassName,
-                                          Health,
-                                          Strength,
-                                          Dexterity,
-                                          Intelligence);
+            string status = string.Format($"{Name} (Class: {ClassName}; Health: {Health}; Strength: {Strength}; Dexterity: {Dexterity}; Intelligence: {Intelligence};");
             return status;
         }
 
