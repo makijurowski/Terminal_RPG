@@ -7,7 +7,7 @@ namespace terminal_rpg
         public Samurai_Choices(string charName)
         {
             Samurai player = new Samurai(charName);
-            Console.WriteLine("Current Player: {0}", player.ShowStatus());
+            Console.WriteLine($"Current Player: {player.ShowStatus()}");
         }
     }
 }
