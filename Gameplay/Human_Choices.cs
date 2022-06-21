@@ -63,7 +63,7 @@ namespace terminal_rpg
                     Console.WriteLine("Stashed away in your pockets, you currently possess:");
                     foreach (KeyValuePair<string, int> item in player.Inventory)
                     {
-                        Console.WriteLine($"You have {item.Value} {item.Key}s.\n");
+                        Console.WriteLine($"You have {item.Value} {item.Key}s.");
                     }
                     Console.WriteLine("Would you like to use one of your items?");
                     Console.ReadKey();
