@@ -11,19 +11,19 @@ namespace terminal_rpg
             ClassName = "Wizard";
             Intelligence = 25;
             Health = 50;
-        }
+        }//eom
 
         // Method used to restore health to the Wizard who invokes it
         public void Heal()
         {
             Health += Intelligence * 5;
-        }
+        }//end of Heal
 
         // Method used to attack another player passed by reference
         public void Fireball(object obj)
         {
             Human enemy = obj as Human;
-            Random random = new Random();
+            Random random = new ();
             if (enemy == null)
             {
                 Console.WriteLine("Fireball failed. This player does not exist.");
@@ -32,6 +32,6 @@ namespace terminal_rpg
             {
                 enemy.Health -= random.Next(20, 51);
             }
-        }
-    }
-}
+        }//end of Fireball
+    }//eoc
+}//eon
