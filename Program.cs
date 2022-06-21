@@ -35,7 +35,7 @@ namespace terminal_rpg
             // User input for character class
             numSelect = Convert.ToInt32(Console.ReadLine());
             MakeChar player = new (numSelect, charName);
-        }      
+        }//end of Start_Game    
 
         // Main method invoked upon running program
         static void Main(string[] args)
@@ -81,6 +81,6 @@ namespace terminal_rpg
             // Initiate a new Game
             Program New_Game = new ();
             New_Game.Start_Game();
-        }
-    }
-}
+        }//eom
+    }//eoc
+}//eon
