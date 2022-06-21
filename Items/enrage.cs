@@ -19,12 +19,12 @@ namespace terminal_rpg
                 target.Strength += 3;
                 target.Intelligence -= 1;
                 target.Dexterity -= 1;
-                Console.WriteLine("{0} became ENRAGED! Strength was increased, but Intelligence, Dexterity, and Health took a hit...", target.Name);
+                Console.WriteLine($"{target.Name} became ENRAGED! Strength was increased, but Intelligence, Dexterity, and Health took a hit...");
             }
             else
             {
-                Console.WriteLine("You do not have any {0}", ClassName);
+                Console.WriteLine($"You do not have any {ClassName}");
             }
-        }
-    }
-}
+        }//eom
+    }//eoc
+}//eon
