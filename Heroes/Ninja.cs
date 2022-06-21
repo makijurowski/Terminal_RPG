@@ -10,13 +10,13 @@ namespace terminal_rpg
         {
             ClassName = "Ninja";
             Dexterity = 75;
-        }
+        }//end of Ninja
 
         // Method used for the Ninja to escape, decreasing their health
         public void Get_Away()
         {
             Health -= 15;
-        }
+        }//end of Get_Away
 
         // Method used to attack another player (passed by reference) and restore health to Ninja who invokes it
         public void Steal(object obj)
@@ -31,7 +31,7 @@ namespace terminal_rpg
                 Attack(enemy);
                 Health += 10;
             }
-        }
-    }
-}
+        }//end of Steal
+    }//eoc
+}//eon
 
