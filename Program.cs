@@ -46,26 +46,26 @@ namespace terminal_rpg
             public MakeEnemy()
             {
                 string[] names = {"Carl", "Samantha", "Robocop", "Blaine", "Roblox", "Goblix", "Jimmy", "Mr. Spanx"};
-                Random random = new Random();
+                Random random = new ();
                 int randomChance = random.Next(1, 5);
                 int randomName = random.Next(1, 10);
 
                 switch(randomChance)
                 {
                     case 1:
-                        Goblin goblinEnemy = new Goblin(names[randomName]);
+                        Goblin goblinEnemy = new (names[randomName]);
                         obj = goblinEnemy;
                         break;
                     case 2:
-                        Spider spiderEnemy = new Spider(names[randomName]);
+                        Spider spiderEnemy = new (names[randomName]);
                         obj = spiderEnemy;
                         break;
                     case 3:
-                        Zombie zombieEnemy = new Zombie(names[randomName]);
+                        Zombie zombieEnemy = new (names[randomName]);
                         obj = zombieEnemy;
                         break;
                     case 4:
-                        GiantBaby giantBabyEnemy = new GiantBaby(names[randomName]);
+                        GiantBaby giantBabyEnemy = new (names[randomName]);
                         obj = giantBabyEnemy;
                         break;
                 }
@@ -106,7 +106,7 @@ namespace terminal_rpg
                         Console.WriteLine("You entered an invalid choice. Please try again.");
                         Console.ReadKey();
                         numSelect = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine(Program.newLine);
+                        Console.WriteLine(newLine);
                         MakeChar player = new (numSelect, charName);
                         break;
                 }
@@ -155,7 +155,7 @@ namespace terminal_rpg
             Console.ReadKey();
 
             // Initiate a new Game
-            Program New_Game = new Program();
+            Program New_Game = new ();
             New_Game.Start_Game();
         }
     }
