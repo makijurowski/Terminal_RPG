@@ -42,7 +42,7 @@ namespace terminal_rpg
                     numSelect = Convert.ToInt32(Console.ReadLine());
                     MakeChar player = new(numSelect, charName);
                     break;
-            }
-        }
-    }
-}
+            }//end switch
+        }//eom
+    }//eoc
+}//eon
